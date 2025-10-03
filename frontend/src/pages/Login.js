@@ -25,24 +25,32 @@ const Login = () => {
       alert("Logination failed");
     }
   };
-  
+
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Login</h2>
-      <input
-        name="email"
-        value={loginFormData.email}
-        placeholder="Email"
-        onChange={handleChange}
-      />
-      <input
-        name="password"
-        value={loginFormData.password}
-        placeholder="Password"
-        onChange={handleChange}
-      />
-      <button type="submit">Login</button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <h2>Login</h2>
+        <input
+          name="email"
+          value={loginFormData.email}
+          placeholder="Email"
+          onChange={handleChange}
+        />
+        <input
+          name="password"
+          value={loginFormData.password}
+          placeholder="Password"
+          onChange={handleChange}
+        />
+        <button type="submit">Login</button>
+      </form>
+      <div>
+        <p>New User ? Go to </p>
+        <button onClick={() => navigate("/register")}>
+          Registeration Page
+        </button>
+      </div>
+    </>
   );
 };
 

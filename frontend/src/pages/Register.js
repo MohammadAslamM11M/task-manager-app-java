@@ -25,24 +25,30 @@ const Register = () => {
       alert("Registeration failed");
     }
   };
-  
+
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Register</h2>
-      <input
-        name="email"
-        value={resgisterFormData.email}
-        placeholder="Email"
-        onChange={handleChange}
-      />
-      <input
-        name="password"
-        value={resgisterFormData.password}
-        placeholder="Password"
-        onChange={handleChange}
-      />
-      <button type="submit">Register</button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <h2>Register</h2>
+        <input
+          name="email"
+          value={resgisterFormData.email}
+          placeholder="Email"
+          onChange={handleChange}
+        />
+        <input
+          name="password"
+          value={resgisterFormData.password}
+          placeholder="Password"
+          onChange={handleChange}
+        />
+        <button type="submit">Register</button>
+      </form>
+      <div>
+        <p>Already a User ? Go to </p>
+        <button onClick={() => navigate("/login")}>Login Page</button>
+      </div>
+    </>
   );
 };
 
